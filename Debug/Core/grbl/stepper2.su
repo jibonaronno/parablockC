@@ -1,0 +1,12 @@
+../Core/grbl/stepper2.c:69:13:st_motor_config	16	static
+../Core/grbl/stepper2.c:75:13:st2_reset	16	static
+../Core/grbl/stepper2.c:85:13:st2_settings_changed	24	static
+../Core/grbl/stepper2.c:97:14:st2_motor_init	24	static
+../Core/grbl/stepper2.c:128:7:st2_motor_set_speed	24	static
+../Core/grbl/stepper2.c:186:6:st2_motor_move	72	static
+../Core/grbl/stepper2.c:271:9:st2_get_position	16	static
+../Core/grbl/stepper2.c:276:6:st2_set_position	24	static
+../Core/grbl/stepper2.c:284:6:st2_motor_run	144	static
+../Core/grbl/stepper2.c:360:6:st2_motor_stop	16	static
+../Core/grbl/stepper2.c:385:6:st2_motor_running	16	static
+../Core/grbl/stepper2.c:390:6:st2_motor_cruising	16	static

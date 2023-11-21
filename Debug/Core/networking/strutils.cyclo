@@ -1,0 +1,8 @@
+../Core/networking/strutils.c:49:7:stristr	18
+../Core/networking/strutils.c:79:7:strappend	3
+../Core/networking/strutils.c:99:10:strnumentries	3
+../Core/networking/strutils.c:112:7:strgetentry	5
+../Core/networking/strutils.c:139:9:strlookup	10
+../Core/networking/strutils.c:164:6:strtotime	24
+../Core/networking/strutils.c:261:7:strtoisodt	4
+../Core/networking/strutils.c:271:7:strtointernetdt	4

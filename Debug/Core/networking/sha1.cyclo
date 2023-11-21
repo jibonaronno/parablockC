@@ -1,0 +1,4 @@
+../Core/networking/sha1.c:21:6:sha1_transform	7
+../Core/networking/sha1.c:78:6:sha1_init	1
+../Core/networking/sha1.c:93:6:sha1_update	3
+../Core/networking/sha1.c:108:6:sha1_final	5
