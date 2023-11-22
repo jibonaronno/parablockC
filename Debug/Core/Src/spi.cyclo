@@ -1,0 +1,5 @@
+../Core/Src/spi.c:45:6:spi_init	2
+../Core/Src/spi.c:176:6:spi_set_max_speed	1
+../Core/Src/spi.c:182:10:spi_set_speed	1
+../Core/Src/spi.c:192:9:spi_get_byte	1
+../Core/Src/spi.c:205:9:spi_put_byte	1

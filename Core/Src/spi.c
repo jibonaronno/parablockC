@@ -191,15 +191,20 @@ uint32_t spi_set_speed (uint32_t prescaler)
 
 uint8_t spi_get_byte (void)
 {
+	/* MOD
     *((__IO uint8_t *)&SPIPORT->DR) = 0xFF; // Writing dummy data into Data register
 
     while(!__HAL_SPI_GET_FLAG(&spi_port, SPI_FLAG_RXNE));
 
     return (uint8_t)spi_port.Instance->DR;
+    */
+
+    return 0;
 }
 
 uint8_t spi_put_byte (uint8_t byte)
 {
+	/* MOD
     *((__IO uint8_t *)&SPIPORT->DR) = byte;
 
     while(!__HAL_SPI_GET_FLAG(&spi_port, SPI_FLAG_TXE));
@@ -208,4 +213,6 @@ uint8_t spi_put_byte (uint8_t byte)
     __HAL_SPI_CLEAR_OVRFLAG(&spi_port);
 
     return (uint8_t)spi_port.Instance->DR;
+    */
+    return 0;
 }

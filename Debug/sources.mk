@@ -22,24 +22,8 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-Core/FatFs/STM \
-Core/FatFs \
-Core/LWIP/App \
-Core/LWIP/Target \
-Core/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src \
-Core/Middlewares/ST/STM32_USB_Device_Library/Core/Src \
-Core/Middlewares/Third_Party/LwIP/src/api \
-Core/Middlewares/Third_Party/LwIP/src/apps/mdns \
-Core/Middlewares/Third_Party/LwIP/src/apps/mqtt \
-Core/Middlewares/Third_Party/LwIP/src/core \
-Core/Middlewares/Third_Party/LwIP/src/core/ipv4 \
-Core/Middlewares/Third_Party/LwIP/src/core/ipv6 \
-Core/Middlewares/Third_Party/LwIP/src/netif \
-Core/Middlewares/Third_Party/LwIP/src/netif/ppp \
 Core/Src \
 Core/Startup \
-Core/USB_DEVICE/App \
-Core/USB_DEVICE/Target \
 Core/bluetooth \
 Core/eeprom \
 Core/embroidery \

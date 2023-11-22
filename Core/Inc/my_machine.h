@@ -36,7 +36,7 @@
 // Uncomment to enable.
 
 #if !IS_NUCLEO_DEVKIT && !defined(USB_SERIAL_CDC)   // The Nucleo-F756ZG board has an off-chip UART to USB interface.
-#define USB_SERIAL_CDC       1 // Serial communication via native USB.
+//#define USB_SERIAL_CDC       1 // Serial communication via native USB.
 #endif
 //#define SAFETY_DOOR_ENABLE   1 // Enable safety door input.
 //#define VFD_ENABLE           1 // Set to 1 or 2 for Huanyang VFD spindle. More here https://github.com/grblHAL/Plugins_spindle

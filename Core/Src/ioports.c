@@ -167,7 +167,8 @@ static bool register_interrupt_handler (uint8_t port, pin_irq_mode_t irq_mode, i
 
         if(irq_mode == IRQ_Mode_None || !ok) {
             while(spin_lock);
-            EXTI->IMR &= ~input->bit;     // Disable pin interrupt
+            // MOD EXTI->IMR &= ~input->bit;     // Disable pin interrupt
+            EXTI->IMR1 &= ~input->bit;     // Disable pin interrupt
             input->irq_mode = IRQ_Mode_None;
             input->interrupt_callback = NULL;
         }

@@ -1,0 +1,7 @@
+../Core/Src/i2c.c:55:6:i2c_init	40	static
+../Core/Src/i2c.c:130:6:I2C1_EV_IRQHandler	8	static
+../Core/Src/i2c.c:135:6:I2C1_ER_IRQHandler	8	static
+../Core/Src/i2c.c:153:6:i2c_probe	16	static
+../Core/Src/i2c.c:164:6:i2c_send	32	static
+../Core/Src/i2c.c:184:6:i2c_get_keycode	16	static
+../Core/Src/i2c.c:192:6:HAL_I2C_MasterRxCpltCallback	16	static

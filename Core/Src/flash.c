@@ -46,6 +46,7 @@ bool memcpy_to_flash (uint8_t *source)
 
     HAL_StatusTypeDef status;
 
+    /* MOD Flash Memory
     if((status = HAL_FLASH_Unlock()) == HAL_OK) {
 
         static FLASH_EraseInitTypeDef erase = {
@@ -71,6 +72,7 @@ bool memcpy_to_flash (uint8_t *source)
 
         HAL_FLASH_Lock();
     }
+    */
 
     return status == HAL_OK;
 }

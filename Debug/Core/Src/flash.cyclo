@@ -1,0 +1,2 @@
+../Core/Src/flash.c:35:6:memcpy_from_flash	1
+../Core/Src/flash.c:42:6:memcpy_to_flash	2

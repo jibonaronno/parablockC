@@ -221,11 +221,13 @@
 #endif
 #endif
 
-#define DEBOUNCE_TIMER_N            9
+
+#define DEBOUNCE_TIMER_N            3 // MOD : it was 9
 #define DEBOUNCE_TIMER              timer(DEBOUNCE_TIMER_N)
 #define DEBOUNCE_TIMER_CLKEN        timerCLKEN(DEBOUNCE_TIMER_N)
-#define DEBOUNCE_TIMER_IRQn         TIM1_BRK_TIM9_IRQn       // !
-#define DEBOUNCE_TIMER_IRQHandler   TIM1_BRK_TIM9_IRQHandler // !
+#define DEBOUNCE_TIMER_IRQn         TIM3_IRQn // MOD  TIM1_BRK_TIM3_IRQn       // ! //MOD It was TIM9
+#define DEBOUNCE_TIMER_IRQHandler   TIM3_IRQHandler // MOD TIM1_BRK_TIM3_IRQHandler // !
+
 
 #define RPM_COUNTER_N               3
 #define RPM_COUNTER                 timer(RPM_COUNTER_N)

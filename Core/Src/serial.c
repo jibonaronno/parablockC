@@ -563,7 +563,7 @@ static bool serialSetBaudRate (uint32_t baud_rate)
     UART0->CR1 |= (USART_CR1_UE|USART_CR1_RXNEIE);
     UART0->CR1 = USART_CR1_RE|USART_CR1_TE;
     UART0->CR3 = USART_CR3_OVRDIS;
-    UART0->BRR = UART_DIV_SAMPLING16(UART0_CLK, baud_rate);
+    UART0->BRR = UART_DIV_SAMPLING16(UART0_CLK, baud_rate, 0); // MOD . 3rd Argument 0 added
     UART0->CR1 |= (USART_CR1_UE|USART_CR1_RXNEIE);
 
     rxbuf.tail = rxbuf.head;
@@ -793,7 +793,9 @@ static bool serial1SetBaudRate (uint32_t baud_rate)
 {
     UART1->CR1 = USART_CR1_RE|USART_CR1_TE;
     UART1->CR3 = USART_CR3_OVRDIS;
-    UART1->BRR = UART_DIV_SAMPLING16(UART1_CLK, baud_rate);
+// MOD    UART1->BRR = UART_DIV_SAMPLING16(UART1_CLK, baud_rate);  LINE BELOW ADDED INSTEAD
+    UART1->BRR = UART_DIV_SAMPLING16(UART1_CLK, baud_rate, 0);
+
     UART1->CR1 |= (USART_CR1_UE|USART_CR1_RXNEIE);
 
     rxbuf1.tail = rxbuf1.head;

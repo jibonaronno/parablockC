@@ -29,24 +29,8 @@ RM := rm -rf
 -include Core/embroidery/subdir.mk
 -include Core/eeprom/subdir.mk
 -include Core/bluetooth/subdir.mk
--include Core/USB_DEVICE/Target/subdir.mk
--include Core/USB_DEVICE/App/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/netif/ppp/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/netif/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/core/ipv6/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/core/ipv4/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/core/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/apps/mqtt/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/apps/mdns/subdir.mk
--include Core/Middlewares/Third_Party/LwIP/src/api/subdir.mk
--include Core/Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
--include Core/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/subdir.mk
--include Core/LWIP/Target/subdir.mk
--include Core/LWIP/App/subdir.mk
--include Core/FatFs/STM/subdir.mk
--include Core/FatFs/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)

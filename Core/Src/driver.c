@@ -1516,6 +1516,8 @@ static uint32_t getElapsedTicks (void)
 
 void gpio_irq_enable (const input_signal_t *input, pin_irq_mode_t irq_mode)
 {
+	/* MOD 0A
+}
     if(irq_mode == IRQ_Mode_Rising) {
         EXTI->RTSR |= input->bit;
         EXTI->FTSR &= ~input->bit;
@@ -1530,6 +1532,7 @@ void gpio_irq_enable (const input_signal_t *input, pin_irq_mode_t irq_mode)
 
     if(irq_mode != IRQ_Mode_None)
         EXTI->IMR |= input->bit;    // Enable pin interrupt
+    */
 }
 
 // Configures peripherals when settings are initialized or changed
@@ -1626,10 +1629,10 @@ void settings_changed (settings_t *settings, settings_changed_flags_t changed)
         HAL_NVIC_DisableIRQ(EXTI4_IRQn);
 #endif
 #if (DRIVER_IRQMASK|AUXINPUT_MASK) & 0x03E0
-        HAL_NVIC_DisableIRQ(EXTI9_5_IRQn);
+// MOD 0B        HAL_NVIC_DisableIRQ(EXTI9_5_IRQn);
 #endif
 #if (DRIVER_IRQMASK|AUXINPUT_MASK) & 0xFC00
-        HAL_NVIC_DisableIRQ(EXTI15_10_IRQn);
+// MOD 0C        HAL_NVIC_DisableIRQ(EXTI15_10_IRQn);
 #endif
 
         bool pullup;
@@ -1756,9 +1759,10 @@ void settings_changed (settings_t *settings, settings_changed_flags_t changed)
                 if(input->cap.irq_mode != IRQ_Mode_None) {
                     aux_irq |= input->bit;
                     // Map interrupt to pin
-                    uint32_t extireg = SYSCFG->EXTICR[input->pin >> 2] & ~(0b1111 << ((input->pin & 0b11) << 2));
+                    // MOD 0D
+/*                    uint32_t extireg = SYSCFG->EXTICR[input->pin >> 2] & ~(0b1111 << ((input->pin & 0b11) << 2));
                     extireg |= ((uint32_t)(GPIO_GET_INDEX(input->port)) << ((input->pin & 0b11) << 2));
-                    SYSCFG->EXTICR[input->pin >> 2] = extireg;
+                    SYSCFG->EXTICR[input->pin >> 2] = extireg; */
                 }
             }
 
@@ -1810,12 +1814,12 @@ void settings_changed (settings_t *settings, settings_changed_flags_t changed)
             HAL_NVIC_EnableIRQ(EXTI4_IRQn);
         }
         if(irq_mask & 0x03E0) {
-            HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 2);
-            HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+// MOD 0F            HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 2);
+// MOD            HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
         }
         if(irq_mask & 0xFC00) {
-            HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 2);
-            HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+// MOD 0G            HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 2);
+// MOD            HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
         }
     }
 
@@ -2074,7 +2078,9 @@ static bool driver_setup (settings_t *settings)
  // Limit pins init
 
     if (settings->limits.flags.hard_enabled)
-        HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0x02, 0x02);
+    {
+        // MOD 0E HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0x02, 0x02);
+    }
 
  // Control pins init
 
