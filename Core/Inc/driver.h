@@ -257,7 +257,7 @@
 // End configuration
 
 #if EEPROM_ENABLE == 0
-#define FLASH_ENABLE 1
+#define FLASH_ENABLE 0 // MOD was 1
 #else
 #define FLASH_ENABLE 0
 #endif

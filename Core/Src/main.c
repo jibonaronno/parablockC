@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "grbl/grbllib.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -94,6 +95,8 @@ int main(void)
   MX_ICACHE_Init();
   MX_MEMORYMAP_Init();
   /* USER CODE BEGIN 2 */
+
+  grbl_enter();
 
   /* USER CODE END 2 */
 

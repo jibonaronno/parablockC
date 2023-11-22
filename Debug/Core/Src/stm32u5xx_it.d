@@ -48,7 +48,18 @@ Core/Src/stm32u5xx_it.o: ../Core/Src/stm32u5xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_ll_usb.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pcd_ex.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h \
- ../Core/Inc/stm32u5xx_it.h
+ ../Core/Inc/stm32u5xx_it.h ../Core/Inc/driver.h ../Core/Inc/my_machine.h \
+ ../Core/Inc/main.h ../Core/grbl/driver_opts.h ../Core/grbl/hal.h \
+ ../Core/grbl/grbl.h ../Core/grbl/config.h ../Core/grbl/nuts_bolts.h \
+ ../Core/grbl/errors.h ../Core/grbl/core_handlers.h ../Core/grbl/system.h \
+ ../Core/grbl/gcode.h ../Core/grbl/coolant_control.h \
+ ../Core/grbl/spindle_control.h ../Core/grbl/probe.h \
+ ../Core/grbl/alarms.h ../Core/grbl/messages.h ../Core/grbl/stream.h \
+ ../Core/grbl/vfs.h ../Core/grbl/settings.h ../Core/grbl/plugins.h \
+ ../Core/grbl/nvs.h ../Core/grbl/report.h ../Core/grbl/ngc_params.h \
+ ../Core/grbl/planner.h ../Core/grbl/machine_limits.h \
+ ../Core/grbl/crossbar.h ../Core/grbl/stepper.h ../Core/grbl/ioports.h \
+ ../Core/Inc/reference_map.h
 ../Core/Inc/main.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h:
 ../Core/Inc/stm32u5xx_hal_conf.h:
@@ -100,3 +111,33 @@ Core/Src/stm32u5xx_it.o: ../Core/Src/stm32u5xx_it.c ../Core/Inc/main.h \
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pcd_ex.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h:
 ../Core/Inc/stm32u5xx_it.h:
+../Core/Inc/driver.h:
+../Core/Inc/my_machine.h:
+../Core/Inc/main.h:
+../Core/grbl/driver_opts.h:
+../Core/grbl/hal.h:
+../Core/grbl/grbl.h:
+../Core/grbl/config.h:
+../Core/grbl/nuts_bolts.h:
+../Core/grbl/errors.h:
+../Core/grbl/core_handlers.h:
+../Core/grbl/system.h:
+../Core/grbl/gcode.h:
+../Core/grbl/coolant_control.h:
+../Core/grbl/spindle_control.h:
+../Core/grbl/probe.h:
+../Core/grbl/alarms.h:
+../Core/grbl/messages.h:
+../Core/grbl/stream.h:
+../Core/grbl/vfs.h:
+../Core/grbl/settings.h:
+../Core/grbl/plugins.h:
+../Core/grbl/nvs.h:
+../Core/grbl/report.h:
+../Core/grbl/ngc_params.h:
+../Core/grbl/planner.h:
+../Core/grbl/machine_limits.h:
+../Core/grbl/crossbar.h:
+../Core/grbl/stepper.h:
+../Core/grbl/ioports.h:
+../Core/Inc/reference_map.h:

@@ -62,8 +62,7 @@ Core/Src/driver.o: ../Core/Src/driver.c ../Core/Inc/main.h \
  ../Core/Inc/reference_map.h ../Core/Inc/serial.h ../Core/grbl/protocol.h \
  ../Core/grbl/motor_pins.h ../Core/grbl/pin_bits_masks.h \
  ../Core/grbl/state_machine.h ../Core/grbl/machine_limits.h \
- ../Core/Inc/flash.h ../Core/grbl/stepdir_map.h \
- ../Core/grbl/plugins_init.h
+ ../Core/grbl/stepdir_map.h ../Core/grbl/plugins_init.h
 ../Core/Inc/main.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h:
 ../Core/Inc/stm32u5xx_hal_conf.h:
@@ -150,6 +149,5 @@ Core/Src/driver.o: ../Core/Src/driver.c ../Core/Inc/main.h \
 ../Core/grbl/pin_bits_masks.h:
 ../Core/grbl/state_machine.h:
 ../Core/grbl/machine_limits.h:
-../Core/Inc/flash.h:
 ../Core/grbl/stepdir_map.h:
 ../Core/grbl/plugins_init.h:
