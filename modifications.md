@@ -16,6 +16,10 @@ Flash will be needed later.
 
 LWiP folders removed
 
+Middlewares/ST and Middlewares/LwIP folders removed
+
+USB_DEVICE folder removed
+
 #define BOARD_REFERENCE       // grblHAL reference board map. is declared in /Core/Inc/my_machine.h 
 
 ## /Core/inc/reference_map.h 
